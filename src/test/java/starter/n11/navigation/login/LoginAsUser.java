@@ -33,9 +33,6 @@ public class LoginAsUser implements Task {
                 SendKeys.of(this.password_text).into(n11LoginPageElements.PASSWORD_FIELD)
                         .thenHit(Keys.ENTER)
                 );
-
-
-
     }
 
     public LoginAsUser(String email_text, String password_text){
@@ -43,8 +40,6 @@ public class LoginAsUser implements Task {
         this.password_text = password_text;
 
     }
-
-
 
     public static LoginAsUser loginThePage(String email_text, String password_text) {
         return instrumented(LoginAsUser.class
